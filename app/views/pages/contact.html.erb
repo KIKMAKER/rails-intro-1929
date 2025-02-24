@@ -1,0 +1,16 @@
+<h1>In Batch #1929 we have:</h1>
+<ul>
+  <% @students.each do |student| %>
+    <li><%= student %></li>
+  <% end %>
+</ul>
+
+
+<form action="/contact" method='get'>
+
+  <input type="text" name="student" placeholder="Who are you looking for?" value="<%= params[:student] %>">
+  <input type="submit">
+</form>
+
+
+<!--http://localhost:3000/contact?student=Sifiso-->

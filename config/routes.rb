@@ -6,10 +6,12 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   # Defines the root path route ("/")
-  # root "posts#index"
+  root 'pages#home'
+  # get '/', to: 'pages#home', as: :kiki
 
+  # tell rails where to go if someone visits the url
   get '/about', to: 'pages#about'
-  # tell rails where to go if someone visits the url 
-  get '/', to: 'pages#home'
   # get('/about', { to: 'pages#about' })
+
+  get '/contact', to: 'pages#contact'
 end
